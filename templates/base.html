@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+    <head>
+        <title>Кирилл Нагиев &mdash; {% block title %}{% endblock %}</title>
+        <link rel="icon" type="image/png" href="{{ STATIC_URL }}img/favicon.png" />
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="keywords" content="{{ config.SEO_KEYWORDS }} {% block keywords %}{% endblock %}">
+        <meta name="description" content="{{ config.SEO_DESCRIPTION }} {% block description %}{% endblock %}">
+
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+        {% block extra_css %}
+        {% endblock %}
+
+        {% if DEBUG %}
+            <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+        {% else %}
+            <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+        {% endif %}
+        {% block extra_js %}
+        {% endblock %}
+
+        {% if not DEBUG %}
+            {% include "includes/stat-ya.html" %}
+            {% include "includes/stat-ga.html" %}
+        {% endif %}
+    </head>
+    <body>
+        <div class="{% block body_classes %}{% endblock %}">
+            {% include "includes/top_menu.html" %}
+
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        {% include "includes/footer.html" %}
+    </body>
+</html>

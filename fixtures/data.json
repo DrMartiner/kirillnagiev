@@ -1,0 +1,11 @@
+[
+    {
+        "pk": 1, 
+        "model": "flatblocks.flatblock", 
+        "fields": {
+            "content": "",
+            "header": "\u0411\u0438\u043e\u0433\u0440\u0430\u0444\u0438\u044f", 
+            "slug": "biography"
+        }
+    }
+]

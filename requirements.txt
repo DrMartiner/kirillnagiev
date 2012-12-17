@@ -1,0 +1,10 @@
+django==1.4
+sorl-thumbnail
+textile
+django-markitup
+django-constance
+django-picklefield
+django-flatblocks
+django-grappelli
+django-annoying
+django-filebrowser

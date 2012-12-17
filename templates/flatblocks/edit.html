@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load flatblock_tags %}
+{% load markitup_tags %}
+
+{% block extra_js %}
+    {% markitup_media %}
+    {% markitup_editor form.content.auto_id auto_preview=False %}
+{% endblock %}
+
+{% block title %}редактирование страницы "{{ form.header.value }}"{% endblock %}
+
+{% block content %}
+    {% if request.user.is_superuser %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save" />
+        </form>
+    {% endif %}
+{% endblock %}

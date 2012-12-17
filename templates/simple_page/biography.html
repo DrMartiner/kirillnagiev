@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% load markitup_tags %}
+
+{% block title %}{{ flatblock.header }}{% endblock %}
+
+{% block content %}
+    {% if request.user.is_superuser %}
+        <a href="{% url flatblocks_edit flatblock.pk %}">Редактирвоать текст</a>
+    {% endif %}
+    {{ flatblock.content|default:""|render_markup }}
+{% endblock %}

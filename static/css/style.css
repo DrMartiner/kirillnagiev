@@ -329,6 +329,12 @@ body.contact #social ul li:first-child {
 body.contact #social ul li:last-child {
 	margin-left: 8px;
 }
+body.contact #contacts a {
+    text-decoration: none;
+    color: #333333;
+    font-family: arial,serif;
+    font-size: 13px;
+}
 body.contact #contacts {
     margin-top: 46px;
     margin-bottom: 46px;
@@ -343,6 +349,7 @@ body.contact #contacts p:last-child {
     margin-bottom: 0;
 }
 body.contact #contacts p strong {
+    font-size: 14px;
     font-weight: bolder;
 }
 

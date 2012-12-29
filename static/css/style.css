@@ -1,0 +1,352 @@
+body{
+	width: 1010px;
+	height: 780px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background: black;
+}
+header {
+	height: 44px;
+}
+header ul {
+	height: 74px;
+}
+header ul li {
+	display: inline;
+	margin-right: 40px;
+	font-size: 15px;
+	font-weight: bolder;
+	font-family: Arial,serif;
+}
+header ul li:last-child {
+	margin-right: 0;
+}
+header ul li a {
+	color: #666666;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+header ul li a:hover {
+	color: #CCCCCC;
+}
+header ul li .active {
+    color: #CCCCCC;
+}
+#container {
+	width: inherit;
+	height: 680px;
+}
+#container h1,
+#content h1 {
+	padding-top: 25px;
+	margin-bottom: 13px;
+	color: black;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: arial,serif;
+	text-transform: uppercase;
+}
+#content h2, #content h2 > a {
+	color: black;
+	font-weight: bold;
+	font-family: arial,serif;
+	font-size: 13px;
+}
+#content {
+	color: #333333;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Arial,serif;
+	text-align: justify;
+	line-height: 18px;
+	width: 460px;
+	padding-left: 40px;
+}
+#content br {
+	margin-top: 5px;
+	display: block;
+}
+
+.arrow {
+	width: 26px;
+	height: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+.up {
+	background: url('../img/arrow_up.png') no-repeat;
+}
+.down {
+    margin-top: 11px;
+    padding-bottom: 18px;
+	background: url('../img/arrow_down.png') no-repeat;
+}
+#text {
+	width: 450px;
+	height: 517px;
+	overflow: hidden;
+}
+footer {
+	font-size: 15px;
+	font-family: arial,serif;
+	color: #353535;
+}
+/*biography*/
+body.biography #content {
+	width: 920px;
+	background: url('../img/bg_biography.png') no-repeat;
+}
+body.biography .arrow {
+    left: -245px;
+    position: relative;
+}
+body.biography .up {
+    padding-bottom: 12px;
+}
+
+/*films*/
+body.films #container {
+	width: inherit;
+	height: 680px;
+	background: url('../img/bg_films.png') no-repeat;
+}
+body.films .film-block {
+    margin-bottom: 16px;
+}
+body.films .film-block img {
+    float: left;
+    padding-top: 18px;
+    margin-right: 10px;
+}
+body.films .film-block:last-child {
+    margin-bottom: 0;
+}
+body.films .film-block p {
+	margin-top: 8px;
+}
+body.films .film-block h2 {
+	padding-top: 16px;
+}
+body.films .down {
+
+}
+/*KirillNagiev*/
+body.main #container {
+	background: url('../img/kirillnagiev.png') no-repeat;
+}
+/* Фото */
+body.photo #container {
+	width: 945px;
+	height: 690px;
+	padding-left: 45px;
+	margin-bottom: 25px;
+	background: -moz-linear-gradient(top, #828282, #c0c0c0);
+}
+body.photo #container ul {
+	width: 955px;
+	height: 555px;
+	overflow: hidden;
+}
+body.photo #container ul li {
+	display: inline;
+}
+
+body.photo #container ul li img {
+	margin-right: 34px;
+	margin-bottom: 35px;
+}
+/*news*/
+body.news #container {
+	width: inherit;
+	height: 680px;
+	background: url("../img/news.png") no-repeat;
+	overflow: hidden;
+}
+body.news h2 {
+	margin-bottom: 8px;
+	/*margin-top: 43px;*/
+	font-weight: bold;
+}
+body.news #text .news p {
+    line-height: 1.4em;
+}
+body.news #text {
+	width: 450px;
+	height: 540px;
+	overflow: hidden;
+	margin-top: 1px;
+}
+body.news .mini-arrow {
+    float: left;
+    width: 127px;
+    height: 16px;
+    margin-top: 9px;
+
+    color: #808080;
+    cursor: pointer;
+    font-family: Arial,serif;
+    background: url('../img/newsdown.png') no-repeat right 6px;
+}
+
+/* Стихи */
+body.poetry #container {
+	width: inherit;
+	height: 650px;
+	margin-bottom: 30px;
+	background:
+		url(../img/struct.png) no-repeat right,
+		-moz-linear-gradient(top, #828282 0%, #c0c0c0 100%);
+}
+body.poetry #text {
+	height: 530px;
+	font-size: 14px;
+}
+body.poetry .mini-arrow {
+	width: 10px;
+	height: 16px;
+	margin-top: 9px;
+	background: url('../img/newsdown.png') no-repeat right;
+	float: left;
+    display: inline-block;
+}
+body.poetry #text h3 {
+	margin-top: 5px;
+	float:left;
+	color: #7a7a7a;
+	font-family: Arial,serif;
+}
+body.poetry #text h2 {
+	margin-bottom: 5px;
+	margin-top: 50px;
+	font-size: 15px;
+}
+body.poetry #text h2:first-child {
+	margin-top: 0;
+}
+body.poetry #text p {
+	line-height: 26px;
+}
+
+/* News detail */
+body.news_detail #container {
+	width: inherit;
+	height: 680px;
+	background: url("../img/news.png") no-repeat;
+	overflow: hidden;
+}
+body.news_detail #text {
+	width: 450px;
+	height: 540px;
+	overflow: hidden;
+	margin-top: 1px;
+}
+body.news_detail #text h2 {
+	margin-bottom: 10px;
+	margin-top: 35px;
+	color: black;
+}
+body.news_detail  #text h2:first-child {
+	margin-top: 0;
+	color: black;
+}
+body.news_detail h3 {
+	margin-top: 5px;
+	float:left;
+	color: #7a7a7a;
+	font-family: Arial,serif;
+}
+body.news_detail p {
+	color: #333333;
+}
+body.news_detail #text .mini-arrow {
+	width: 10px;
+	height: 16px;
+	margin-top: 9px;
+	margin-left: 3px;
+	background: url('../img/mini_arrow.png') no-repeat;
+	float:left;
+}
+/*Видео*/
+body.video #container {
+	width: 990px;
+	height: 695px;
+	margin-bottom: 18px;
+	background: -moz-linear-gradient(top, #828282, #c0c0c0);
+}
+body.video #container h1 {
+	margin-left: 40px;
+	padding-top: 33px;
+	font-weight: bold;
+	font-size: 14px;
+}
+body.video #container ul {
+	height: 555px;
+	overflow: hidden;
+
+}
+.video_margin {
+	margin-left: 28px;
+	margin-right: 28px;
+	margin-top: 28px;
+	display: inline;
+	float: left;
+}
+figcaption {
+	margin-top: 12px;
+}
+/* Контакты */
+body.contact #container {
+	width: inherit;
+	height: 650px;
+	margin-bottom: 30px;
+	background:
+		url(../img/contact.png) no-repeat right,
+		-moz-linear-gradient(top, #828282 0%, #c0c0c0 100%);
+}
+body.contact #social {
+    float: left;
+}
+body.contact #social ul li a {
+    text-decoration: none;
+}
+body.contact #content ul{
+	margin-top: 14px;
+	float: left;
+}
+body.contact #social ul li {
+	display: inline;
+	margin-left: 18px;
+}
+body.contact #content ul li.name {
+    vertical-align: middle;
+    padding-bottom: 12px;
+}
+body.contact #social ul li:first-child {
+	margin-left: 0;
+}
+body.contact #social ul li:last-child {
+	margin-left: 8px;
+}
+body.contact #contacts {
+    margin-top: 46px;
+    margin-bottom: 46px;
+}
+body.contact #contacts p {
+    color: #333333;
+    font-family: arial,serif;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+body.contact #contacts p:last-child {
+    margin-bottom: 0;
+}
+body.contact #contacts p strong {
+    font-weight: bolder;
+}
+
+body.contact #twitter_widget {
+    display: block;
+    float: left;
+}

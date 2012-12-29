@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block body_class %}contact{% endblock %}
+
+{% block content %}
+    <div id="content">
+        <h1>контакты</h1>
+
+        <div id="text">
+            <div id="contacts">
+                <p>
+                    <a href="mailto:{{ config.CONTACT_EMAIL }}">
+                        {{ config.CONTACT_EMAIL }}
+                    </a>
+                </p>
+                <p>
+                    {{ config.CONTACT_AGEN_NAME|safe }}
+                </p>
+                <p>
+                    {{ config.CONTACT_PHONE }}
+                </p>
+            </div>
+
+            <div id="social">
+                <ul>
+                    <li>
+                        <a href="{{ config.CONTACT_SOCIAL_TWITTER_LINK }}">
+                            <img src="{{ STATIC_URL }}img/contact_picture1.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ config.CONTACT_SOCIAL_FB_LINK }}">
+                            <img src="{{ STATIC_URL }}img/contact_picture2.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ config.CONTACT_SOCIAL_VK_LINK }}">
+                            <img src="{{ STATIC_URL }}img/contact_picture3.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ config.CONTACT_SOCIAL_INSTAGRAM_LINK }}">
+                            <img src="{{ STATIC_URL }}img/contact_picture4.png">
+                        </a>
+                    </li>
+                    <li class="name">Kirill_nagiev</li>
+                </ul>
+            </div>
+
+            <div id="twitter_widget">
+                {{ config.CONTACT_SOCIAL_TWITTER_WIDGET|default:""|safe }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

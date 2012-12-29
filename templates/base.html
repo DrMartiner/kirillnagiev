@@ -49,12 +49,14 @@
                         Фильмография
                     </a>
                 </li>
-                <li>
-                    {% url poetry_list as poetry_list_url %}
-                    <a href="{{ poetry_list_url }}" {% ifequal request.path poetry_list_url %}class="active"{% endifequal %}>
-                        Стихи
-                    </a>
-                </li>
+                {% if config.SITE_SHOW_POETRY|lower == "true" %}
+                    <li>
+                        {% url poetry_list as poetry_list_url %}
+                        <a href="{{ poetry_list_url }}" {% ifequal request.path poetry_list_url %}class="active"{% endifequal %}>
+                            Стихи
+                        </a>
+                    </li>
+                {% endif %}
                 <li>
                     <a href="#">
                         Фото
@@ -68,7 +70,7 @@
                 </li>
                 <li>
                     {% url news_list as news_list_url %}
-                    <a href="{{ news_list }}" {% if 'news' in requst.path %}class="active"{% endif %}>
+                    <a href="{{ news_list_url }}" {% if 'news' in requst.path %}class="active"{% endif %}>
                         Новости
                     </a>
                 </li>

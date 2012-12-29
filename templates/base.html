@@ -12,6 +12,9 @@
         {% block extra_css %}
         {% endblock %}
 
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
         {% if DEBUG %}
             <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
         {% else %}
@@ -25,16 +28,66 @@
             {% include "includes/stat-ga.html" %}
         {% endif %}
     </head>
-    <body>
-        <div class="{% block body_classes %}{% endblock %}">
-            {% include "includes/top_menu.html" %}
+    <body class="{% block body_class %}{% endblock %}">
+        <header>
+            <ul>
+                <li>
+                    {% url main_page as main_page_url %}
+                    <a href="{{ main_page_url }}" {% ifequal request.path main_page_url %}class="active"{% endifequal %}>
+                        Кирилл Нагиев
+                    </a>
+                </li>
+                <li>
+                    {% url biography_page as biography_page_url %}
+                    <a href="{{ biography_page_url }}" {% ifequal request.path biography_page_url %}class="active"{% endifequal %}>
+                        Биография
+                    </a>
+                </li>
+                <li>
+                    {% url film_list as film_list_url %}
+                    <a href="{{ film_list_url }}" {% ifequal request.path film_list_url %}class="active"{% endifequal %}>
+                        Фильмография
+                    </a>
+                </li>
+                <li>
+                    {% url poetry_list as poetry_list_url %}
+                    <a href="{{ poetry_list_url }}" {% ifequal request.path poetry_list_url %}class="active"{% endifequal %}>
+                        Стихи
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Фото
+                    </a>
+                </li>
+                <li>
+                    {% url video_list as video_list_url %}
+                    <a href="{{ video_list_url }}" {% ifequal request.path video_list_url %}class="active"{% endifequal %}>
+                        Видео
+                    </a>
+                </li>
+                <li>
+                    {% url news_list as news_list_url %}
+                    <a href="{{ news_list }}" {% if 'news' in requst.path %}class="active"{% endif %}>
+                        Новости
+                    </a>
+                </li>
+                <li>
+                    {% url contact_page as contact_page_url %}
+                    <a href="{{ contact_page_url }}" {% ifequal request.path contact_page_url %}class="active"{% endifequal %}>
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </header>
 
-            <div class="content">
-                {% block content %}
-                {% endblock %}
-            </div>
+        <div id="container">
+            {% block content %}
+            {% endblock %}
         </div>
 
-        {% include "includes/footer.html" %}
+        <footer>
+            &#174; Официальный сайт актера Кирилла Нагиева
+        </footer>
     </body>
 </html>

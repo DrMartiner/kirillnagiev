@@ -289,12 +289,10 @@ body.video #container ul {
 	overflow: hidden;
 
 }
-.video_margin {
-	margin-left: 28px;
-	margin-right: 28px;
-	margin-top: 28px;
+body.video #container ul li {
+    margin: 28px 28px 0;
+    float: left;
 	display: inline;
-	float: left;
 }
 figcaption {
 	margin-top: 12px;

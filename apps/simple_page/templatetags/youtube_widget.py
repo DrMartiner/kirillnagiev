@@ -8,16 +8,12 @@ register = template.Library()
 
 @register.filter
 @stringfilter
-def youtube(url):
+def youtube(url, name):
     regex = re.compile(r"^(http://)?(www\.)?(youtube\.com/watch\?v=)?(?P<id>[A-Za-z0-9\-=_]{11})")
     match = regex.match(url)
     if not match: return ""
     video_id = match.group('id')
     return """
-        <object width="425" height="344">
-        <param name="movie" value="http://www.youtube.com/watch/v/%s"></param>
-        <param name="allowFullScreen" value="true"></param>
-        <embed src="http://www.youtube.com/watch/v/%s" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed>
-        </object>
-        """ % (video_id, video_id)
-youtube.is_safe = True # Don't escape HTML
+        <iframe width="439" height="267" src="http://www.youtube.com/embed/%s" frameborder="0" allowfullscreen></iframe>
+        <figcaption>%s</figcaption></figure>
+        """ % (video_id, name)

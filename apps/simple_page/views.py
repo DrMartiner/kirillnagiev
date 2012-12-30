@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView, ListView, DetailView
 
 from flatblocks.models import FlatBlock
-from .models import Film, Poetry, Video, News
+from .models import Film, Poetry, Video, News, Photo
 
 class MainPage(TemplateView):
     template_name = 'simple_page/main_page.html'
@@ -46,3 +46,8 @@ class NewsDetail(DetailView):
     model = News
     slug_field = 'slug'
     template_name = 'simple_page/news_detail.html'
+
+class PhotoList(ListView):
+    model = Photo
+    context_object_name = 'photos'
+    template_name = 'simple_page/photos.html'

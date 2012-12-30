@@ -6,6 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <meta name="keywords" content="{{ config.SEO_KEYWORDS }} {% block keywords %}{% endblock %}">
         <meta name="description" content="{{ config.SEO_DESCRIPTION }} {% block description %}{% endblock %}">
+        <meta name="author" content="Kuzmin Alexey">
 
         <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" />
         <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
@@ -58,7 +59,8 @@
                     </li>
                 {% endif %}
                 <li>
-                    <a href="#">
+                    {% url photo_list as photo_list_url %}
+                    <a href="{{ photo_list_url }}" {% ifequal request.path photo_list_url %}class="active"{% endifequal %}>
                         Фото
                     </a>
                 </li>

@@ -21,7 +21,7 @@
                     {% if film.link %}
                         <a href="{{ film.link }}">
                             {% if film.image %}
-                                {% thumbnail item.image "45x64" crop="center center" as im %}
+                                {% thumbnail film.image "45x64" crop="center center" as im %}
                                     <img src="{{ im.url }}" alt="{{ film.name }}">
                                 {% empty %}
                                     <img src="{{ STATIC_URL }}img/film_covert.png" alt="{{ film.name }}">
@@ -32,7 +32,7 @@
                         </a>
                     {% else %}
                         {% if film.image %}
-                            {% thumbnail item.image "45x64" crop="center center" as im %}
+                            {% thumbnail film.image "45x64" crop="center center" as im %}
                                 <img src="{{ im.url }}" alt="{{ film.name }}">
                             {% empty %}
                                 <img src="{{ STATIC_URL }}img/film_covert.png" alt="{{ film.name }}">

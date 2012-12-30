@@ -8,7 +8,7 @@ from filebrowser.sites import site
 from flatblocks.views import edit
 
 from apps.simple_page.views import MainPage, BiographyPage, ContactPage
-from apps.simple_page.views import FilmList, PoetryList, VideoList
+from apps.simple_page.views import FilmList, PoetryList, VideoList, PhotoList
 from apps.simple_page.views import NewsList, NewsDetail
 
 admin.autodiscover()
@@ -26,6 +26,7 @@ urlpatterns = patterns('',
     url(r'^news/(?P<slug>[^/]+)/$', NewsDetail.as_view(), name='news_detail'),
     url(r'^poetry/$', PoetryList.as_view(), name='poetry_list'),
     url(r'^video/$', VideoList.as_view(), name='video_list'),
+    url(r'^photo/$', PhotoList.as_view(), name='photo_list'),
 
     url(r'^flatblocks/(?P<pk>\d+)/edit/$', login_required(edit), {'permission_check': permission_check}, name='flatblocks_edit'),
     url(r'^markitup/', include('markitup.urls')),

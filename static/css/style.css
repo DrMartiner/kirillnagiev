@@ -152,6 +152,9 @@ body.photo #container ul {
 body.photo #container ul li {
 	display: inline;
 }
+body.photo #container ul li a {
+    text-decoration: none;
+}
 
 body.photo #container ul li img {
 	margin-right: 34px;

@@ -30,11 +30,11 @@
             $(document).ready(function() {
                 var scrollBlock = $('#' + scrollBlockId);
 
-                if (scrollBlock[0].scrollHeight > 517) {
+                if (scrollBlock[0].scrollHeight > scrollBlock.height()) {
                     $('.arrow').removeClass('hide-arrow');
 
                     $('.arrow.up').mousedown(function() {
-                        if (scrollBlock.scrollTop() + scrollBlock.outerHeight() <= 517)
+                        if (scrollBlock.scrollTop() + scrollBlock.outerHeight() <= scrollBlock.height())
                             return;
 
                         scrollBlock.animate({

@@ -118,6 +118,7 @@ body.films #container {
 }
 body.films .film-block {
     margin-bottom: 16px;
+    min-height: 85px;
 }
 body.films .film-block img {
     float: left;

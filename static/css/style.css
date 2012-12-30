@@ -83,6 +83,10 @@ header ul li .active {
     padding-bottom: 18px;
 	background: url('../img/arrow_down.png') no-repeat;
 }
+.hide-arrow {
+    background: none;
+    cursor: default;
+}
 #text {
 	width: 450px;
 	height: 517px;
@@ -159,6 +163,9 @@ body.photo #container ul li a {
 body.photo #container ul li img {
 	margin-right: 34px;
 	margin-bottom: 35px;
+}
+body.photo .arrow.up {
+    margin-bottom: 18px;
 }
 /*news*/
 body.news #container {

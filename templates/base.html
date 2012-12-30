@@ -13,6 +13,11 @@
         {% block extra_css %}
         {% endblock %}
 
+        <script type="text/javascript">
+            scrollBlockId = 'text';
+        </script>
+        {% block extra_js_vars %}
+        {% endblock %}
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -21,6 +26,36 @@
         {% else %}
             <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
         {% endif %}
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var scrollBlock = $('#' + scrollBlockId);
+
+                if (scrollBlock[0].scrollHeight > 517) {
+                    $('.arrow').removeClass('hide-arrow');
+
+                    $('.arrow.up').mousedown(function() {
+                        if (scrollBlock.scrollTop() + scrollBlock.outerHeight() <= 517)
+                            return;
+
+                        scrollBlock.animate({
+                            scrollTop: 0
+                        }, 1500, function() {
+                            // End scroll
+                        });
+                    });
+                    $('.arrow.down').mousedown(function() {
+                        if (scrollBlock.scrollTop() + scrollBlock.outerHeight() >= scrollBlock[0].scrollHeight)
+                            return;
+
+                        scrollBlock.animate({
+                            scrollTop: scrollBlock[0].scrollHeight
+                        }, 1500, function() {
+                            // End scroll
+                        });
+                    });
+                }
+            });
+        </script>
         {% block extra_js %}
         {% endblock %}
 

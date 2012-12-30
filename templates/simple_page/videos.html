@@ -3,18 +3,25 @@
 {% load youtube_widget %}
 
 {% block title %}Видео{% endblock %}
+
 {% block body_class %}video{% endblock %}
+
+{% block extra_js_vars %}
+    <script type="text/javascript">
+        scrollBlockId = 'video_list';
+    </script>
+{% endblock %}
 
 {% block content %}
     <h1>Видео</h1>
 
-    <div class="arrow up"></div>
-    <ul>
+    <div class="arrow up hide-arrow"></div>
+    <ul id="video_list">
         {% for video in videos %}
             <li figure class="video_margin">
                 {{ video.link|youtube:video.name|safe }}
             </li>
         {% endfor %}
     </ul>
-    <div class="arrow down"></div>
+    <div class="arrow down hide-arrow"></div>
 {% endblock %}

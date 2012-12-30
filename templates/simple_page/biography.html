@@ -9,13 +9,13 @@
 {% block content %}
     <div id="content">
         <h1>{{ flatblock.header }}</h1>
-        <div class="arrow up"></div>
+        <div class="arrow up hide-arrow"></div>
         <div id="text">
             {% if request.user.is_superuser %}
                 <a href="{% url flatblocks_edit flatblock.pk %}">Редактирвоать текст</a>
             {% endif %}
             {{ flatblock.content|default:""|render_markup }}
         </div>
-        <div class="arrow down"></div>
+        <div class="arrow down hide-arrow"></div>
     </div>
 {% endblock %}

@@ -28,7 +28,7 @@ class Poetry(models.Model):
         help_text='Чем больше, тем выше в списке'
     )
     year = models.PositiveSmallIntegerField('Год', blank=True, null=True)
-    contetn = models.TextField('Стих')
+    content = models.TextField('Стих')
 
     class Meta:
         ordering = ('-num', )
@@ -55,7 +55,7 @@ class News(models.Model):
         help_text='Чем больше, тем выше в списке'
     )
     slug = models.SlugField('Заголовок транслитом', unique=True)
-    contetn = models.TextField('Новость')
+    content = models.TextField('Новость')
     link = models.URLField('Ссылка на новость', verify_exists=False, blank=True, null=True)
     pub_date = models.DateField('Опубликовано', default=datetime.today)
 

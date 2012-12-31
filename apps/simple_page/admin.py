@@ -36,7 +36,7 @@ class PhotoAdmin(admin.ModelAdmin):
 class PoetryAdmin(admin.ModelAdmin):
     list_display = ('name', 'num', 'year', )
     list_editable = ('num', 'year', )
-    search_fields = ('contetn', )
+    search_fields = ('content', )
 
 class VideoAdmin(admin.ModelAdmin):
     list_display = ('name', 'num', 'link', )
@@ -46,7 +46,7 @@ class NewsAdmin(admin.ModelAdmin):
     list_display = ('name', 'num', 'pub_date', 'link', 'slug', )
     list_editable = ('num', 'pub_date', 'link', 'slug', )
     list_filter = ('pub_date', )
-    search_fields = ('contetn', 'name', )
+    search_fields = ('content', 'name', )
 
     prepopulated_fields = {'slug': ('name', )}
 

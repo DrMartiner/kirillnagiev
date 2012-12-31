@@ -184,7 +184,7 @@ body.news #text .news-block p {
 }
 body.news #text {
 	width: 450px;
-	height: 540px;
+	/*height: 540px;*/
 	overflow: hidden;
 	margin-top: 1px;
 }

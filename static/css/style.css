@@ -175,12 +175,11 @@ body.news #container {
 	background: url("../img/news.png") no-repeat;
 	overflow: hidden;
 }
-body.news h2 {
+body.news .news-block h2 {
 	margin-bottom: 8px;
-	/*margin-top: 43px;*/
 	font-weight: bold;
 }
-body.news #text .news p {
+body.news #text .news-block p {
     line-height: 1.4em;
 }
 body.news #text {
@@ -195,10 +194,17 @@ body.news .mini-arrow {
     height: 16px;
     margin-top: 9px;
 
+    background: url('../img/newsdown.png') no-repeat right 4px;
+}
+body.news .mini-arrow a {
+    text-decoration: none;
     color: #808080;
     cursor: pointer;
     font-family: Arial,serif;
-    background: url('../img/newsdown.png') no-repeat right 6px;
+}
+body.news .news-block {
+    min-height: 125px;
+    display: block;
 }
 
 /* Стихи */

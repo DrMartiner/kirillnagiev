@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Новости{% endblock %}
+
+{% block body_class %}news{% endblock %}
+
+{% block content %}
+    <div id="content">
+        <h1>новости</h1>
+        <div class="arrow up hide-arrow"></div>
+        <div id="text">
+            {% for news in news_list %}
+                <div class="news-block">
+                    <h2>Заголовок новости</h2>
+                    <p>
+                        {{ news.content|striptags|safe|truncatewords:"20" }}
+                    </p>
+                    <div class="mini-arrow">
+                        <a href="{% url news_detail news.slug %}">читать полностью</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="arrow down hide-arrow"></div>
+    </div>
+{% endblock %}

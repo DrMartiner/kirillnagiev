@@ -206,6 +206,9 @@ body.news .news-block {
     min-height: 125px;
     display: block;
 }
+body.news .up {
+    margin-bottom: 12px;
+}
 
 /* Стихи */
 body.poetry #container {

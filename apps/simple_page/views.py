@@ -39,7 +39,7 @@ class VideoList(ListView):
 
 class NewsList(ListView):
     model = News
-    context_object_name = 'news'
+    context_object_name = 'news_list'
     template_name = 'simple_page/news_list.html'
 
 class NewsDetail(DetailView):

@@ -1,0 +1,54 @@
+<header>
+    <ul>
+        <li>
+            {% url main_page as main_page_url %}
+            <a href="{{ main_page_url }}" {% ifequal request.path main_page_url %}class="active"{% endifequal %}>
+                Кирилл Нагиев
+            </a>
+        </li>
+        <li>
+            {% url biography_page as biography_page_url %}
+            <a href="{{ biography_page_url }}" {% ifequal request.path biography_page_url %}class="active"{% endifequal %}>
+                Биография
+            </a>
+        </li>
+        <li>
+            {% url film_list as film_list_url %}
+            <a href="{{ film_list_url }}" {% ifequal request.path film_list_url %}class="active"{% endifequal %}>
+                Фильмография
+            </a>
+        </li>
+        {% if config.SITE_SHOW_POETRY|lower == "true" %}
+            <li>
+                {% url poetry_list as poetry_list_url %}
+                <a href="{{ poetry_list_url }}" {% ifequal request.path poetry_list_url %}class="active"{% endifequal %}>
+                    Стихи
+                </a>
+            </li>
+        {% endif %}
+        <li>
+            {% url photo_list as photo_list_url %}
+            <a href="{{ photo_list_url }}" {% ifequal request.path photo_list_url %}class="active"{% endifequal %}>
+                Фото
+            </a>
+        </li>
+        <li>
+            {% url video_list as video_list_url %}
+            <a href="{{ video_list_url }}" {% ifequal request.path video_list_url %}class="active"{% endifequal %}>
+                Видео
+            </a>
+        </li>
+        <li>
+            {% url news_list as news_list_url %}
+            <a href="{{ news_list_url }}" {% if 'news' in requst.path %}class="active"{% endif %}>
+                Новости
+            </a>
+        </li>
+        <li>
+            {% url contact_page as contact_page_url %}
+            <a href="{{ contact_page_url }}" {% ifequal request.path contact_page_url %}class="active"{% endifequal %}>
+                Контакты
+            </a>
+        </li>
+    </ul>
+</header>

@@ -255,7 +255,7 @@ body.news_detail #container {
 }
 body.news_detail #text {
 	width: 450px;
-	height: 540px;
+	/*height: 540px;*/
 	overflow: hidden;
 	margin-top: 1px;
 }
@@ -284,6 +284,9 @@ body.news_detail #text .mini-arrow {
 	margin-left: 3px;
 	background: url('../img/mini_arrow.png') no-repeat;
 	float:left;
+}
+body.news_detail .up {
+    margin-bottom: 15px;
 }
 /*Видео*/
 body.video #container {

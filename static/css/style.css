@@ -147,7 +147,13 @@ body.photo #container {
 	height: 690px;
 	padding-left: 45px;
 	margin-bottom: 25px;
-	background: -moz-linear-gradient(top, #828282, #c0c0c0);
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#828282 0%), to(#c0c0c0 100%)); /* Saf4+, Chrome */
+    background: -webkit-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* FF3.6+ */
+    background:     -ms-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* IE10 */
+    background:      -o-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* Opera 11.10+ */
+    background:         linear-gradient(top, #828282 0%, #c0c0c0 100%); /* W3C */
 }
 body.photo #container ul {
 	width: 955px;
@@ -296,7 +302,12 @@ body.video #container {
 	width: 990px;
 	height: 695px;
 	margin-bottom: 18px;
-	background: -moz-linear-gradient(top, #828282, #c0c0c0);
+    background: -webkit-gradient(linear, left top, left bottom, from(#828282 0%), to(#c0c0c0 100%)); /* Saf4+, Chrome */
+    background: -webkit-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* FF3.6+ */
+    background:     -ms-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* IE10 */
+    background:      -o-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* Opera 11.10+ */
+    background:         linear-gradient(top, #828282 0%, #c0c0c0 100%); /* W3C */
 }
 body.video #container h1 {
 	margin-left: 40px;
@@ -322,9 +333,13 @@ body.contact #container {
 	width: inherit;
 	height: 650px;
 	margin-bottom: 30px;
-	background:
-		url(../img/contact.png) no-repeat right,
-		-moz-linear-gradient(top, #828282 0%, #c0c0c0 100%);
+
+    background: url(../img/contact.png) no-repeat right, -webkit-gradient(linear, left top, left bottom, from(#828282 0%), to(#c0c0c0 100%)); /* Saf4+, Chrome */
+    background: url(../img/contact.png) no-repeat right, -webkit-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* Chrome 10+, Saf5.1+ */
+    background: url(../img/contact.png) no-repeat right,    -moz-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* FF3.6+ */
+    background: url(../img/contact.png) no-repeat right,     -ms-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* IE10 */
+    background: url(../img/contact.png) no-repeat right,      -o-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* Opera 11.10+ */
+    background: url(../img/contact.png) no-repeat right,         linear-gradient(top, #828282 0%, #c0c0c0 100%); /* W3C */
 }
 body.contact #social {
     float: left;

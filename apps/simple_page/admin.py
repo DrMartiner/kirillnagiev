@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import os
 from django.contrib import admin
 from sorl.thumbnail import get_thumbnail
 
@@ -16,6 +17,8 @@ class FilmAdmin(admin.ModelAdmin):
     def covert(self, obj):
         link = '/static/img/film_covert.jpg'
         if obj.image:
+            if not os.path.exists(obj.image.path):
+                return u'<img src="%s" />' % link
             im = get_thumbnail(obj.image, '65x45', crop='center center', quality=99)
             link = im.url
         return u'<img src="%s" />' % link
@@ -27,8 +30,10 @@ class PhotoAdmin(admin.ModelAdmin):
     list_editable = ('num', 'alt')
 
     def preview(self, obj):
-        im = get_thumbnail(obj.image, '65x65', crop='center center', quality=99)
-        return u'<img src="%s" />' % im.url
+        if os.path.exists(obj.image.path):
+            im = get_thumbnail(obj.image, '65x65', crop='center center', quality=99)
+            return u'<img src="%s" />' % im.url
+        return ''
     preview.admin_order_field = 'image'
     preview.short_description = 'Фото'
     preview.allow_tags = True

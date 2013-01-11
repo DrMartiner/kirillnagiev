@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
         <meta name="keywords" content="{{ config.SEO_KEYWORDS }} {% block keywords %}{% endblock %}">
         <meta name="description" content="{{ config.SEO_DESCRIPTION }} {% block description %}{% endblock %}">
-        <meta name="author" content="Kuzmin Alexey">
+        <meta name="author" content="Kuzmin Alexey & Julia Sunrise">
 
         <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" />
         <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
@@ -15,6 +15,7 @@
 
         <script type="text/javascript">
             scrollBlockId = 'text';
+            scrollPageSpeed = 1500;
         </script>
         {% block extra_js_vars %}
         {% endblock %}
@@ -26,36 +27,7 @@
         {% else %}
             <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
         {% endif %}
-        <script type="text/javascript">
-            $(document).ready(function() {
-                var scrollBlock = $('#' + scrollBlockId);
-
-                if (scrollBlock[0].scrollHeight > scrollBlock.height()) {
-                    $('.arrow').removeClass('hide-arrow');
-
-                    $('.arrow.up').mousedown(function() {
-                        if (scrollBlock.scrollTop() + scrollBlock.outerHeight() <= scrollBlock.height())
-                            return;
-
-                        scrollBlock.animate({
-                            scrollTop: 0
-                        }, 1500, function() {
-                            // End scroll
-                        });
-                    });
-                    $('.arrow.down').mousedown(function() {
-                        if (scrollBlock.scrollTop() + scrollBlock.outerHeight() >= scrollBlock[0].scrollHeight)
-                            return;
-
-                        scrollBlock.animate({
-                            scrollTop: scrollBlock[0].scrollHeight
-                        }, 1500, function() {
-                            // End scroll
-                        });
-                    });
-                }
-            });
-        </script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}scripts/scroll-page.js"></script>
         {% block extra_js %}
         {% endblock %}
 

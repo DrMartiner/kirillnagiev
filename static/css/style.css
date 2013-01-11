@@ -22,7 +22,7 @@ header ul li {
 header ul li:first-child {
     float: left;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 35px;
 }
 header ul li:last-child {
     padding-left: 0;

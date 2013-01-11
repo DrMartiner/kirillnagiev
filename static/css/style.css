@@ -14,7 +14,7 @@ header ul {
 }
 header ul li {
 	display: inline;
-    padding: 0 31px;
+    padding: 0 28px;
 	font-size: 15px;
 	font-weight: bolder;
 	font-family: Arial,serif;
@@ -25,6 +25,7 @@ header ul li:first-child {
     padding-right: 0;
 }
 header ul li:last-child {
+    padding-left: 0;
 	margin-right: 18px;
     float: right;
 }

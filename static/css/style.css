@@ -155,6 +155,9 @@ body.photo #container {
     background:      -o-linear-gradient(top, #828282 0%, #c0c0c0 100%); /* Opera 11.10+ */
     background:         linear-gradient(top, #828282 0%, #c0c0c0 100%); /* W3C */
 }
+body.photo #container h1 {
+    width: 45px;
+}
 body.photo #container ul {
 	width: 955px;
 	height: 555px;
@@ -311,9 +314,8 @@ body.video #container {
 }
 body.video #container h1 {
 	margin-left: 40px;
-	padding-top: 33px;
-	font-weight: bold;
-	font-size: 14px;
+	padding-top: 25px;
+    width: 50px;
 }
 body.video #container ul {
 	height: 555px;

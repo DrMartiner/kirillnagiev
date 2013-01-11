@@ -15,5 +15,5 @@ def youtube(url, name):
     video_id = match.group('id')
     return """
         <iframe width="439" height="267" src="http://www.youtube.com/embed/%s" frameborder="0" allowfullscreen></iframe>
-        <figcaption>%s</figcaption></figure>
+        <figcaption>%s</figcaption>
         """ % (video_id, name)

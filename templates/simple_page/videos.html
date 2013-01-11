@@ -18,7 +18,7 @@
     <div class="arrow up hide-arrow"></div>
     <ul id="video_list">
         {% for video in videos %}
-            <li figure class="video_margin">
+            <li>
                 {{ video.link|youtube:video.name|safe }}
             </li>
         {% endfor %}

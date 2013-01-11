@@ -339,6 +339,7 @@ body.video #container ul li {
 	display: inline;
 }
 figcaption {
+    width: 418px;
 	margin-top: 12px;
 }
 /* Контакты */

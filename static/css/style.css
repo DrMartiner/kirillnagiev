@@ -336,6 +336,11 @@ body.video #container ul li {
     float: left;
 	display: inline;
 }
+body.video figcaption {
+    font-size: 14pt;
+    font-family: Arial,serif;
+    font-weight: lighter;
+}
 figcaption {
     width: 418px;
 	margin-top: 12px;

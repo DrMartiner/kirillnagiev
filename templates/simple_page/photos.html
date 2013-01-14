@@ -20,7 +20,10 @@
     <script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.fancybox-1.3.4.pack.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $(".fancybox").fancybox();
+            $(".fancybox").fancybox({
+                animations: 'elastic',
+                titlePosition: 'none'
+            });
         });
     </script>
 {% endblock %}

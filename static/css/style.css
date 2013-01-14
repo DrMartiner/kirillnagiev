@@ -195,10 +195,6 @@ body.news #container {
 	background: url("../img/news.png") no-repeat;
 	overflow: hidden;
 }
-body.news .news-block h2 {
-	margin-bottom: 8px;
-	font-weight: bold;
-}
 body.news #text .news-block p {
     line-height: 1.4em;
 }
@@ -214,7 +210,7 @@ body.news .mini-arrow {
     height: 16px;
     margin-top: 9px;
 
-    background: url('../img/newsdown.png') no-repeat right 4px;
+    background: url('../img/newsdown.png') no-repeat right 3px;
 }
 body.news .mini-arrow a {
     text-decoration: none;
@@ -270,6 +266,9 @@ body.poetry #text p {
 }
 
 /* News detail */
+body.news_detail h1 a {
+    color: black;
+}
 body.news_detail #container {
 	width: inherit;
 	height: 680px;

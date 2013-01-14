@@ -6,11 +6,12 @@
 
 {% block content %}
     <div id="content">
-        <h1>Новости</h1>
+        <h1>
+            <a href="{% url news_list %}">Новости</a> / {{ news.name }}
+        </h1>
 
         <div class="arrow up hide-arrow"></div>
         <div id="text">
-            <h2>{{ news.name }}</h2>
             {{ news.content|safe }}
         </div>
         <div class="arrow down hide-arrow"></div>

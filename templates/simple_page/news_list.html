@@ -11,7 +11,7 @@
         <div id="text">
             {% for news in news_list %}
                 <div class="news-block">
-                    <h2>Заголовок новости</h2>
+                    <h2>{{ news.name }}</h2>
                     <p>
                         {{ news.content|striptags|safe|truncatewords:"20" }}
                     </p>

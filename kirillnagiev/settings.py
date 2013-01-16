@@ -5,7 +5,7 @@ import os.path
 from os import path
 
 try:
-    from .local_settings import *
+    from .settings_local import *
 except ImportError:
     print 'Don\'t fogot create settings_local.py'
 
@@ -140,6 +140,6 @@ CONSTANCE_CONFIG = {
 }
 
 try:
-    from .local_settings import *
+    from .settings_local import *
 except ImportError:
     pass

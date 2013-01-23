@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from datetime import datetime
 from django.db import models
+from datetime import datetime
+from django.core.urlresolvers import reverse
 
 class Film(models.Model):
     name = models.CharField('Название', max_length=64)
@@ -58,6 +59,9 @@ class News(models.Model):
     content = models.TextField('Новость')
     link = models.URLField('Ссылка на новость', verify_exists=False, blank=True, null=True)
     pub_date = models.DateField('Опубликовано', default=datetime.today)
+
+    def get_absolute_url(self):
+        return reverse('news_detail', args=[self.id])
 
     class Meta:
         ordering = ('-num', '-pub_date')

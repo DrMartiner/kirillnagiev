@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.contrib.sitemaps import GenericSitemap
 
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView, ListView, DetailView
@@ -51,3 +52,12 @@ class PhotoList(ListView):
     model = Photo
     context_object_name = 'photos'
     template_name = 'simple_page/photos.html'
+
+news_dict = {
+    'queryset': News.objects.all(),
+    'date_field': 'pub_date',
+}
+
+sitemaps = {
+    'news': GenericSitemap(news_dict, priority=0.8, changefreq='monthly'),
+}

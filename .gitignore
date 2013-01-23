@@ -21,7 +21,7 @@ dist
 
 *.sqlite3
 activate
-local_settings.py
+settings_local.py
 
 static/admin/*
 static/grappelli/*

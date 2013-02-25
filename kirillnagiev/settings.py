@@ -58,6 +58,7 @@ ADMIN_MEDIA_PREFIX = '/static/grappelli/'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 SECRET_KEY = ''
@@ -108,6 +109,7 @@ INSTALLED_APPS = (
     'filebrowser',
     'django.contrib.admin',
 
+    'compressor',
     'constance.backends.database',
     'constance',
     'markitup',
@@ -116,6 +118,8 @@ INSTALLED_APPS = (
 
     'apps.simple_page',
 )
+
+COMPRESS_ROOT = os.path.normpath(os.path.join(SITE_ROOT, 'static'))
 
 DIRECTORY = 'filebrowser'
 FILEBROWSER_DIRECTORY = 'filebrowser'

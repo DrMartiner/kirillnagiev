@@ -1,3 +1,5 @@
+{% load compress %}
+
 <!DOCTYPE HTML>
 <html lang="ru-RU">
     <head>
@@ -8,8 +10,10 @@
         <meta name="description" content="{{ config.SEO_DESCRIPTION }} {% block description %}{% endblock %}">
         <meta name="author" content="Kuzmin Alexey & Julia Sunrise">
 
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" />
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+        {% compress css %}
+            <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" />
+            <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+        {% endcompress %}
         {% block extra_css %}
         {% endblock %}
 
@@ -23,12 +27,15 @@
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        {% if DEBUG %}
-            <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
-        {% else %}
-            <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
-        {% endif %}
-        <script type="text/javascript" src="{{ MEDIA_URL }}scripts/scroll-page.js"></script>
+
+        {% compress js %}
+            {% if DEBUG %}
+                <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+            {% else %}
+                <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+            {% endif %}
+            <script type="text/javascript" src="{{ STATIC_URL }}scripts/scroll-page.js"></script>
+        {% endcompress %}
         {% block extra_js %}
         {% endblock %}
 

@@ -24,5 +24,6 @@ activate
 settings_local.py
 
 static/admin/*
+static/scripts/*
 static/grappelli/*
 static/filebrowser/*

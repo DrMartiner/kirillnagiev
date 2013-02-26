@@ -410,3 +410,9 @@ body.contact #twitter_widget {
     display: block;
     float: left;
 }
+#text p {
+    margin-top: 7px;
+}
+#content #text {
+    font-weight: normal;
+}

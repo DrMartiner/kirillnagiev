@@ -1,6 +1,7 @@
 /.idea
 *.pyc
 
+.env/*
 logs/*
 media/*
 cover/*
@@ -19,11 +20,14 @@ build
 dist
 *.egg-info
 
-*.sqlite3
 activate
 settings_local.py
 
+static/django_js_utils.js
 static/admin/*
-static/scripts/*
 static/grappelli/*
 static/filebrowser/*
+static/CACHE/*
+static/scripts/*
+
+payu/*

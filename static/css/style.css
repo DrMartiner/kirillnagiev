@@ -360,6 +360,7 @@ body.contact #container {
 }
 body.contact #social {
     float: left;
+    margin-bottom: 10px;
 }
 body.contact #social ul li a {
     text-decoration: none;
@@ -389,7 +390,7 @@ body.contact #contacts a {
     font-size: 13px;
 }
 body.contact #contacts {
-    margin-top: 46px;
+    margin-top: 26px;
     margin-bottom: 46px;
 }
 body.contact #contacts p {
@@ -409,6 +410,7 @@ body.contact #contacts p strong {
 body.contact #twitter_widget {
     display: block;
     float: left;
+    width: 350px;
 }
 #text p {
     margin-top: 7px;

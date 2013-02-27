@@ -131,7 +131,7 @@ CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 CONSTANCE_CONFIG = {
     'SITE_SHOW_POETRY': ('True', u'True - показывать; False - не показвапть'),
     'CONTACT_EMAIL': ('nagiev.k@gmail.com', u'Почта'),
-    'CONTACT_AGEN_NAME': (u'Анна Кеворкова, <strong>"Актерское агенство №1"</strong>', u'Имя агента'),
+    'CONTACT_AGEN_NAME': (u'Анна Кеворкова, "Актерское агенство №1"', u'Имя агента'),
     'CONTACT_PHONE': ('+7 (921) 965 78 45', u'Телефон'),
     'CONTACT_SOCIAL_FB_LINK': ('https://ru-ru.facebook.com/nagiev.k', u'Ссылка на FaceBook'),
     'CONTACT_SOCIAL_VK_LINK': ('http://vk.com/id559255', u'Ссылка на Vkontakte'),

@@ -1,6 +1,7 @@
-$(document).ready () ->
+$(window).load () ->
     scrollBlock = $('#' + scrollBlockId)
 
+    console.log scrollBlock[0].scrollHeight, scrollBlock.height()
     if scrollBlock.length
         if scrollBlock[0].scrollHeight > scrollBlock.height()
             enableBtns = () ->

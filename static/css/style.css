@@ -432,3 +432,6 @@ body.photo #container {
     height: 653px;
     margin-bottom: 30px;
 }
+#photo_list li {
+    height: 240px;
+}

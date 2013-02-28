@@ -418,3 +418,17 @@ body.contact #twitter_widget {
 #content #text {
     font-weight: normal;
 }
+body.video ul #video_list {
+    margin-left: 24px;
+}
+body.video #container ul li {
+    margin: 28px 16px 0;
+}
+body.video #container {
+    height: 650px;
+    margin-bottom: 30px;
+}
+body.photo #container {
+    height: 653px;
+    margin-bottom: 30px;
+}
